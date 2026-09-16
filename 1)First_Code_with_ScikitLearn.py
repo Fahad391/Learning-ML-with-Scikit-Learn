@@ -51,7 +51,14 @@ error = np.sqrt(mean_squared_error(Y_test, Predict_the_price_per_sQ))
 new_houses = [[1600,3], [2800,4]]
 predict_it = model.predict(new_houses)
 
-# Print both predictions cleanly
+# Let's evaluate via the 20%, the test part to see what it does
+for i in range(len(X_test)):
+    print(f"House {X_test[i]} predicted {Predict_the_price_per_sQ[i]:.2f} BDT per SQ feet where Actual is {Y_test[i]:.2f} BDT")
+
+# check the error
+print(f"\nAverage Model Error (RMSE): ±{error:.2f} BDT")
+
+# Time to see what it predicts on new data
 print(f"Predicted Price for House 1 (1600 sqft, 3 bed): {predict_it[0]:.2f} BDT per SQfeet")
 print(f"Predicted Price for House 2 (2800 sqft, 4 bed): {predict_it[1]:.2f} BDT per SQfeet")
-print(f"Average Model Error: ±{error:.2f} BDT")
+
