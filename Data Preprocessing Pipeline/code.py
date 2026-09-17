@@ -36,7 +36,15 @@ num_scaler = scaler.fit_transform(data[["Item purchased", "Total Cost (BDT)"]])
 # Reframe again
 new_df_2 = pd.DataFrame(num_scaler, columns=["Item purchased",  "Total Cost (BDT)"])
 
-# Assemble the data usinfg concate
-X = pd.concat([new_df_1, new_df_2], axis=1)
+# Assemble the data using concat
+encoded_form = pd.concat([new_df_1, new_df_2], axis=1)
 
-print(X)
+print(encoded_form)
+
+print("\n\n")
+# Decode
+decode_new_df_1 = pd.DataFrame(encoder.inverse_transform(new_df_1), columns=["Area"])
+decode_new_df_2 = pd.DataFrame(scaler.inverse_transform(new_df_2), columns=["Item purchased", "Total Cost (BDT)"])
+
+decoded_form = pd.concat([decode_new_df_1, decode_new_df_2], axis=1)
+print(decoded_form)
