@@ -62,3 +62,11 @@ M_clean = pd.concat([encoded_cities_df, scaled_nums_df], axis=1)
 
 print("\nClean Processed Data")
 print(M_clean)
+
+# Decode
+decode_city = pd.DataFrame(encoder.inverse_transform(encoded_cities), columns=["City"])
+decode_nums = pd.DataFrame(scaler.inverse_transform(scaled_nums), columns=["Bedrooms", "Square Feet"])
+
+decoded_M_Clean = pd.concat([decode_city, decode_nums], axis=1)
+print("\nDecoded From")
+print(decoded_M_Clean)
