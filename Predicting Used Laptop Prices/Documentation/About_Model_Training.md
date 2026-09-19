@@ -1,5 +1,4 @@
-This document serves as a comprehensive reference explaining the logic, data flow, and underlying reasons behind every single line of code in Model_Training.py.
-
+This is what I understood
 ## 1. The Big Picture (Mapping Diagram)
 
 ```
