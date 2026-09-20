@@ -72,7 +72,6 @@ new_data_scaled = scaler.transform(new_data)
 # Make Prediction
 predict_it = model.predict(new_data_scaled)
 probability = model.predict_proba(new_data_scaled)[:,1]
-new_accuracy = accuracy_score(Y_Test,predict_it)
 
 print("\nAfter Trying the model on New Data\n")
 # using for loop to loop through Age, Salary, Prediction and Probability together
@@ -83,4 +82,3 @@ for age, salary, pred, prob in zip(new_data["Age"], new_data["Salary (BDT)k"], p
     else:
         print(f"Customer  Age: {age}, Salary: {salary}k BDT -> will not Buy it (Confidence: {(1 - prob) * 100:.1f}%)")
 
-print(f"Model Accuracy Now: {new_accuracy * 100:.1f}%")
