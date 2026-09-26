@@ -1,0 +1,26 @@
+[
+  {
+    "customer_id": "CUST_2001",
+    "feature_1": 1.45,
+    "feature_2": -0.92,
+    "feature_3": 0.68,
+    "feature_4": -1.35,
+    "feature_5": 1.10
+  },
+  {
+    "customer_id": "CUST_2002",
+    "feature_1": -2.40,
+    "feature_2": 1.65,
+    "feature_3": -1.98,
+    "feature_4": 0.85,
+    "feature_5": -1.45
+  },
+  {
+    "customer_id": "CUST_2003",
+    "feature_1": 0.12,
+    "feature_2": -0.15,
+    "feature_3": 0.34,
+    "feature_4": -0.45,
+    "feature_5": 0.50
+  }
+]
